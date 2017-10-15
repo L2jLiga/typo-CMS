@@ -1,0 +1,17 @@
+
+# Turn on .htaccess rewrites
+RewriteEngine on
+
+# Redirect for Admin-Panel
+RewriteRule ^admin/ admin.php? [L]
+RewriteRule ^admin/(.*)/ admin.php?module=$1 [L]
+RewriteRule ^admin/(.*)/(.*)/ admin.php?module=$1&act=$ [L]
+RewriteRule ^admin/(.*)/(.*)/(.*)/ admin.php?module=$1&act=$2&id=$3 [L]
+
+# Redirect for modules
+RewriteRule ^(.*)/(.*)/(.*)/$ index.php?module=$1&act=$2&id=$3 [L]
+RewriteRule ^(.*)/(.*)/$ index.php?module=$1&act=$2 [L]
+RewriteRule ^(.*)/$ index.php?module=$1 [L]
+
+# Universal CSS Loader
+RewriteRule ^(.*)/res/style.css$ styleloader.php?module=$1 [L]

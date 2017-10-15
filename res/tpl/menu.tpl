@@ -1,0 +1,1 @@
+<menuitem><a href='/{dir}/'>{name}</a></menuitem>

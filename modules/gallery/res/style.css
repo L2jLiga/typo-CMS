@@ -1,0 +1,15 @@
+/*
+ * Таблица стилей галереи
+ */
+
+div.galdir {
+	display:block;
+}
+
+.gallery {
+	display: inline-block;
+	width: 30%;
+}
+.gallery > img {
+	width: 99%;
+}
